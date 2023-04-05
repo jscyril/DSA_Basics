@@ -10,7 +10,16 @@ void printList(node *ptr){
         ptr=ptr->next;
     }
 }
+void push(int data, node *head, node *tail){
+    node *new_node=(node *)malloc(sizeof(node));
+    tail->next=new_node;
+    new_node->data=data;
+    new_node->next= NULL;
+
+}
 int main(){
+    int x;
+
     node *head = (node *)malloc(sizeof(node));
     node *second = (node *)malloc(sizeof(node));
     node *third = (node *)malloc(sizeof(node));
@@ -32,7 +41,14 @@ int main(){
     //Final node
     tail->data=5;
     tail->next=NULL;
-
+    //Printing
     ptr=head;
     printList(ptr);
+    //Insertion:
+    printf("Enter data for new node:\n");
+    scanf("%d", &x);
+    push(x,tail,tail);
+    ptr=head;
+    printList(ptr);
+
 }
