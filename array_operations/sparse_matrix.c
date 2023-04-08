@@ -28,7 +28,7 @@ int main(){
             for(j=0;j<col;j++){
                 printf("\n");
                 if(arr[i][j]!=0)
-                    printf("%d\t%d\t%d ",i,j,arr[i][j]);
+                    printf("%d\t%d\t%d ",i+1,j+1,arr[i][j]);
             }      
         }
     }else
